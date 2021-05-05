@@ -1,7 +1,7 @@
-FROM tomcat:8.5-alpine
+FROM openjdk:8-jdk-slim
 
 MAINTAINER pranav.dhope@gmail.com
 
 COPY target/demo*.jar webapps/
 
-CMD ["catalina.sh", "run"]
+CMD ["java", "-jar", "demo*.jar"]
